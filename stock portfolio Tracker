@@ -1,0 +1,22 @@
+
+prices = {
+    "AAPL": 180,
+    "TSLA": 250,
+    "GOOGL": 150
+}
+
+total = 0
+count = int(input("How many stocks? "))
+
+for i in range(count):
+    name = input("Enter stock name: ").upper()
+    quantity = int(input("Enter quantity: "))
+
+    if name in prices:
+        value = prices[name] * quantity
+        total += value
+        print(name, "investment =", value)
+    else:
+        print("Stock not found:", name)
+
+print("Total investment =", total)
